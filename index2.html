@@ -4,21 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
         integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="responsive.css">
+       
+
 </head>
 
 <body>
-   
-        <header class="au-header">
+
+        <header class="header">
             <nav>
                 <div class="logo"><img src="assets/images/logo.jpg" alt="logo"></div>
                 <div class="right">
                     <ul>
-                        <li><a href="index2.html">Home </a> </li>
+                        <li><a href="index.html">Home </a> </li>
                         <li><a href="about.html">About</a> </li>
                         <li><a href="course.html">Course</a></li>
                         <li><a href="blog.html">Blog</a></li>
@@ -26,9 +30,19 @@
                     </ul>
                 </div>
             </nav>
-            <h1>Courses We Offer</h1>
         </header>
-         <!-- -----------course----------------- -->
+        <div class="text-box">
+            <h1>Inspiring Minds, Transforming Lives</h1>
+            <p> Using an advance quility scoring Algorithm and machine Learning, <br> we ensure that you receive more
+                ides
+                from our top-quilities creatives
+            </p>
+            <a href="" class="btn">Visit us to know more</a>
+
+        </div>
+    
+    <main>
+        <!-- -----------course----------------- -->
         <section class="course">
             <h1>Courses we offer</h1>
             <p>Using an advanced quality scoring Algorithm and machine Learning</p>
@@ -62,9 +76,7 @@
 
         </section>
     </main>
-
-
-     <!--  ----------------facilities------------------- -->
+    <!--  ----------------facilities------------------- -->
 
     <section class="facilities">
         <h1>Our facilities</h1>
@@ -93,6 +105,18 @@
         </div>
     </section>
 
+    <!------call to action-----  -->
+    <section class="cta">
+        <h1>Enroll For Our Various Online Courses</h1>
+        <a href="" class="btn">CONTACT US</a>
+
+        <div class="row">
+            <div class="cta-col">
+
+            </div>
+        </div>
+    </section>
+
     <!-- ----footer--- -->
     <footer>
         <div class="footer">
@@ -110,6 +134,17 @@
             <p>Made by Niswarth</p>
         </div>
     </footer>
+  <script>
+    const menuBtn = document.createElement("div");
+    menuBtn.className = "menu-btn";
+    menuBtn.innerHTML = "&#9776;"; // hamburger icon
+    document.querySelector("nav").appendChild(menuBtn);
+
+    menuBtn.addEventListener("click", () => {
+        document.querySelector(".right ul").classList.toggle("show-menu");
+    });
+</script>
+
 </body>
 
 </html>
