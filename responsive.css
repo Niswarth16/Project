@@ -1,0 +1,242 @@
+/* ================================
+   RESPONSIVE FIXES START HERE
+   ================================ */
+
+/* Make flex rows wrap on small screens */
+.row {
+    flex-wrap: wrap;
+}
+
+/* ---------- Navbar Responsive ---------- */
+nav {
+    padding: 10px 20px;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+    position: static; /* remove left: 180% */
+}
+
+nav .right ul {
+    display: flex;
+    gap: 25px;
+    margin-right: 0;
+}
+
+nav .right ul li a {
+    font-size: 18px;
+}
+
+/* Mobile menu button */
+.menu-btn {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
+/* ---------- Header text responsive ---------- */
+.text-box h1 {
+    font-size: 38px;
+}
+
+.text-box p {
+    font-size: 18px;
+}
+
+/* ---------- Course / Facilities Cards ---------- */
+.course-col,
+.facilities-col,
+.blog-left,
+.blog-right,
+.contact-col,
+.about-col {
+    flex-basis: 100%;
+}
+
+/* Make cards full width on smaller screens */
+@media (max-width: 1024px) {
+    .course-col,
+    .facilities-col {
+        flex-basis: 48%;
+    }
+
+    .blog-left,
+    .blog-right {
+        flex-basis: 48%;
+    }
+}
+
+/* ---------- TABLET MODE ---------- */
+@media (max-width: 768px) {
+
+    nav {
+        padding: 10px;
+    }
+
+    /* Show mobile menu button */
+    .menu-btn {
+        display: block;
+    }
+
+    /* Hide nav links initially */
+    .right ul {
+        display: none;
+        flex-direction: column;
+        background: rgba(0,0,0,0.8);
+        position: absolute;
+        top: 80px;
+        right: 20px;
+        width: 200px;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .right ul.show-menu {
+        display: flex;
+    }
+
+    .right ul li a {
+        font-size: 20px;
+        color: white;
+    }
+
+    .text-box h1 {
+        font-size: 28px;
+    }
+
+    .text-box p {
+        font-size: 16px;
+    }
+
+    .course,
+    .facilities,
+    .about-us,
+    .blog,
+    .contant-us {
+        width: 90%;
+        padding: 50px 0;
+    }
+
+    .course-col,
+    .facilities-col,
+    .about-col,
+    .contact-col,
+    .blog-left,
+    .blog-right {
+        flex-basis: 100%;
+    }
+
+    /* Blog categories spacing fix */
+    .blog-right div {
+        justify-content: space-between;
+    }
+
+    /* CTA section responsiveness */
+    .cta h1 {
+        font-size: 22px;
+        padding: 0 20px;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+}
+
+/* ---------- MOBILE MODE ---------- */
+@media (max-width: 480px) {
+
+    .text-box h1 {
+        font-size: 24px;
+    }
+
+    .text-box p {
+        font-size: 15px;
+    }
+
+    .course h1,
+    .facilities h1 {
+        font-size: 26px;
+    }
+
+    .course p,
+    .facilities p {
+        font-size: 13px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+
+    .blog-left img {
+        border-radius: 10px;
+    }
+
+    .contact-col div {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    iframe {
+        height: 250px !important;
+    }
+}
+
+/* ========================
+   FIX: Make items row on big screens
+   ======================== */
+
+/* Desktop: 3 items per row */
+.course-col,
+.facilities-col {
+    flex-basis: 31%;
+}
+
+/* Blog layout desktop */
+.blog-left {
+    flex-basis: 65%;
+}
+.blog-right {
+    flex-basis: 32%;
+}
+
+/* Contact layout desktop */
+.contact-col {
+    flex-basis: 48%;
+}
+
+/* About page layout desktop */
+.about-col {
+    flex-basis: 48%;
+}
+
+/* Tablet view: 2 items per row */
+@media (max-width: 1024px) {
+
+    .course-col,
+    .facilities-col,
+    .about-col,
+    .contact-col {
+        flex-basis: 48%;
+    }
+
+    .blog-left,
+    .blog-right {
+        flex-basis: 100%;
+    }
+}
+
+/* Mobile view: 1 item per row */
+@media (max-width: 576px) {
+
+    .course-col,
+    .facilities-col,
+    .about-col,
+    .contact-col,
+    .blog-left,
+    .blog-right {
+        flex-basis: 100%;
+    }
+}
